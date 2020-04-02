@@ -8,6 +8,8 @@
 
 #pragma once
 
+
+// 真牛逼啊
 template <typename T> //关键码删除后若节点下溢，则做节点旋转或合并处理
 void BTree<T>::solveUnderflow ( BTNodePosi(T) v ) {
    if ( ( _order + 1 ) / 2 <= v->child.size() ) return; //递归基：当前节点并未下溢

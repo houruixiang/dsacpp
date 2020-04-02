@@ -54,11 +54,21 @@ template <typename T> void  testBTree ( int order, int n ) {
 /******************************************************************************************
 * 测试主入口
 ******************************************************************************************/
-int main ( int argc, char* argv[] ) {
-   if ( 3 > argc ) { printf ( "Usage: %s <order of B-tree> <size of test>\a\a\n", argv[0] ); return 1; }
-   int order = atoi ( argv[1] ); if ( order < 3 )  { printf ( "Make sure the order (%d) is no less than 3.\a\a\n", order ); return 1; }
-   int size = atoi ( argv[2] ); if ( size < 0 )  { printf ( "Make sure the size (%d) is no less than 0.\a\a\n", size ); return 1; }
-   srand ( ( unsigned int ) time ( NULL ) );
-   testBTree<int> ( atoi ( argv[1] ), atoi ( argv[2] ) ); //元素类型、比较器可以在这里任意选择
-   return 0;
+//int main ( int argc, char* argv[] ) {
+//   if ( 3 > argc ) { printf ( "Usage: %s <order of B-tree> <size of test>\a\a\n", argv[0] ); return 1; }
+//   int order = atoi ( argv[1] ); if ( order < 3 )  { printf ( "Make sure the order (%d) is no less than 3.\a\a\n", order ); return 1; }
+//   int size = atoi ( argv[2] ); if ( size < 0 )  { printf ( "Make sure the size (%d) is no less than 0.\a\a\n", size ); return 1; }
+//   srand ( ( unsigned int ) time ( NULL ) );
+//   testBTree<int> ( atoi ( argv[1] ), atoi ( argv[2] ) ); //元素类型、比较器可以在这里任意选择
+//   return 0;
+//}
+
+int main(int argc, char* argv[]) {
+    printf("Usage: <order of B-tree> <size of test>\a\a\n");
+    int order = 3; if (order < 3) { printf("Make sure the order (%d) is no less than 3.\a\a\n", order); return 1; }
+    int size = 7; if (size < 0) { printf("Make sure the size (%d) is no less than 0.\a\a\n", size); return 1; }
+    srand((unsigned int)time(NULL));
+    testBTree<int>(order, size); //元素类型、比较器可以在这里任意选择
+    return 0;
 }
+

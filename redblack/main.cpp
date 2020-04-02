@@ -61,9 +61,17 @@ void  testRedBlack ( int n ) {
 /******************************************************************************************
  * 测试主入口
  ******************************************************************************************/
-int main ( int argc, char* argv[] ) {
-   if ( 2 > argc ) { printf ( "Usage: %s <size of test>\a\a\n", argv[0] ); return 1; }
-   srand ( ( unsigned int ) time ( NULL ) );
-   testRedBlack<int> ( atoi ( argv[1] ) ); //元素类型可以在这里任意选择
-   return 0;
+//int main ( int argc, char* argv[] ) {
+//   if ( 2 > argc ) { printf ( "Usage: %s <size of test>\a\a\n", argv[0] ); return 1; }
+//   srand ( ( unsigned int ) time ( NULL ) );
+//   testRedBlack<int> ( atoi ( argv[1] ) ); //元素类型可以在这里任意选择
+//   return 0;
+//}
+
+
+int main(int argc, char* argv[]) {
+    int num = 10;
+    srand((unsigned int)time(NULL));
+    testRedBlack<int>(num); //元素类型可以在这里任意选择
+    return 0;
 }
