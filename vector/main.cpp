@@ -132,9 +132,17 @@ void   testVector ( int testSize ) {
 /******************************************************************************************
  * 测试向量
  ******************************************************************************************/
-int main ( int argc, char* argv[] ) {
-   if ( 2 > argc ) { printf ( "Usage: %s <size of test>\a\a\n", argv[0] ); return 1; }
-   srand ( ( unsigned int ) time ( NULL ) ); //设置随机种子
-   testVector<int> ( atoi ( argv[1] ) ); //元素类型可以在这里任意选择
-   return 0;
+//int main ( int argc, char* argv[] ) {
+//   if ( 2 > argc ) { printf ( "Usage: %s <size of test>\a\a\n", argv[0] ); return 1; }
+//   srand ( ( unsigned int ) time ( NULL ) ); //设置随机种子
+//   testVector<int> ( atoi ( argv[1] ) ); //元素类型可以在这里任意选择
+//   return 0;
+//}
+
+
+int main(int argc, char* argv[]) {
+    int n = 15;
+    srand((unsigned int)time(NULL)); //设置随机种子
+    testVector<int>(15); //元素类型可以在这里任意选择
+    return 0;
 }

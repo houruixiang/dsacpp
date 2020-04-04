@@ -175,5 +175,11 @@
     <ClInclude Include="vector_unsort.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="vector_shellSort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_insertSort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

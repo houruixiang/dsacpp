@@ -21,11 +21,14 @@ protected:
    void bubbleSort ( Rank lo, Rank hi ); //起泡排序算法
    Rank max ( Rank lo, Rank hi ); //选取最大元素
    void selectionSort ( Rank lo, Rank hi ); //选择排序算法
+   void insertSort(Rank lo, Rank hi); // 插入排序算法
    void merge ( Rank lo, Rank mi, Rank hi ); //归并算法
    void mergeSort ( Rank lo, Rank hi ); //归并排序算法
    Rank partition ( Rank lo, Rank hi ); //轴点构造算法
    void quickSort ( Rank lo, Rank hi ); //快速排序算法
    void heapSort ( Rank lo, Rank hi ); //堆排序（稍后结合完全堆讲解）
+   void groupSort(Rank i, Rank gap); //希尔排序用到的插入排序
+   void shellSort(Rank lo, Rank hi); //希尔排序
 public:
 // 构造函数
    Vector ( int c = DEFAULT_CAPACITY, int s = 0, T v = 0 ) //容量为c、规模为s、所有元素初始为v

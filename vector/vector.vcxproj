@@ -105,6 +105,7 @@
     <ClInclude Include="..\_share\rand.h" />
     <ClInclude Include="..\_share\release.h" />
     <ClInclude Include="..\_share\util.h" />
+    <ClInclude Include="vector_insertSort.h" />
     <ClInclude Include="permute.h" />
     <ClInclude Include="vector.h" />
     <ClInclude Include="vector_assignment.h" />
@@ -138,6 +139,7 @@
     <ClInclude Include="Vector_search_fibonaccian_A.h" />
     <ClInclude Include="Vector_search_fibonaccian_B.h" />
     <ClInclude Include="vector_selectionsort.h" />
+    <ClInclude Include="vector_shellSort.h" />
     <ClInclude Include="vector_shrink.h" />
     <ClInclude Include="vector_sort.h" />
     <ClInclude Include="vector_test.h" />

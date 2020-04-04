@@ -40,12 +40,16 @@
 #include "Vector_sort.h"
 #include "vector_bubble.h"
 #include "vector_bubbleSort.h"
+#include "vector_insertSort.h" //自己添加
 #include "vector_selectionSort.h"
 #include "vector_merge.h"
 #include "vector_mergeSort.h"
 #include "vector_partition_B.h" //有A、A1、B、B1、C共5个版本
 #include "vector_quickSort.h"
 #include "vector_heapSort.h"
+#include "vector_shellSort.h" //自己添加
 
+
+ 
 #include "Vector_uniquify.h" //或者Vector_uniquify_slow.h
 #include "Vector_deduplicate.h"
