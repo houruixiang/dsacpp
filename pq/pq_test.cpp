@@ -23,7 +23,7 @@ void  testHeap ( int n ) {
    /*DSA*/for ( int i = 0; i < 2 * n / 3; i++ ) print ( A[i] ); printf ( "\n" );
    PQ heap ( A + n / 6, n / 3 ); //批量建堆（PQ_ComplHeap实现了Robert Floyd算法）
    delete [] A;
-   /*DSA*/system("cls"); print ( heap );  Sleep(100);
+   /*DSA*/system("cls"); print ( heap );  Sleep(300);
    while ( heap.size() < n ) { //随机测试
       if ( dice ( 100 ) < 70 ) { //70%概率插入新词条
          T e = dice ( ( T ) 3 * n ); /*DSA*/printf ( "Inserting" ); print ( e ); printf ( " ...\n" );
@@ -34,29 +34,51 @@ void  testHeap ( int n ) {
             T e = heap.delMax();/*DSA*/printf ( "Deletion done with" ); print ( e ); printf ( "\n" );
          }
       }
-      /*DSA*/system("cls"); print ( heap ); Sleep(100);
+      /*DSA*/system("cls"); print ( heap ); Sleep(300);
    }
    while ( !heap.empty() ) { //清空
       T e = heap.delMax();/*DSA*/printf ( "Deletion done with" ); print ( e ); printf ( "\n" );
-      /*DSA*/system("cls"); print ( heap ); Sleep(100);
+      /*DSA*/system("cls"); print ( heap ); Sleep(300);
    }
 }
 
 /******************************************************************************************
  * 优先级队列测试
  ******************************************************************************************/
-int main ( int argc, char* argv[] ) {
-   if ( 2 > argc ) { printf ( "Usage: %s <size of test>\a\a\n", argv[0] ); return 1; }
-   srand ( ( unsigned int ) time ( NULL ) );
-   //srand( 1234567 );
+//int main ( int argc, char* argv[] ) {
+//   if ( 2 > argc ) { printf ( "Usage: %s <size of test>\a\a\n", argv[0] ); return 1; }
+//   srand ( ( unsigned int ) time ( NULL ) );
+//   //srand( 1234567 );
+//#if defined(DSA_PQ_LEFTHEAP)
+//   testHeap<PQ_LeftHeap<int>, int> ( atoi ( argv[1] ) ); //词条类型可以在这里任意选择
+//#elif defined(DSA_PQ_COMPLHEAP)
+//   testHeap<PQ_ComplHeap<int>, int> ( atoi ( argv[1] ) ); //词条类型可以在这里任意选择
+//#elif defined(DSA_PQ_LIST)
+//   testHeap<PQ_List<int>, int> ( atoi ( argv[1] ) ); //词条类型可以在这里任意选择
+//#else
+//   printf ( "PQ type not defined yet\n" );
+//#endif
+//   return 0;
+//}
+
+
+
+
+int main(int argc, char* argv[]) {
+
+    int n = 16;
+    srand((unsigned int)time(NULL));
+    //srand( 1234567 );
 #if defined(DSA_PQ_LEFTHEAP)
-   testHeap<PQ_LeftHeap<int>, int> ( atoi ( argv[1] ) ); //词条类型可以在这里任意选择
+    testHeap<PQ_LeftHeap<int>, int>(n); //词条类型可以在这里任意选择
 #elif defined(DSA_PQ_COMPLHEAP)
-   testHeap<PQ_ComplHeap<int>, int> ( atoi ( argv[1] ) ); //词条类型可以在这里任意选择
+    testHeap<PQ_ComplHeap<int>, int>(n); //词条类型可以在这里任意选择
 #elif defined(DSA_PQ_LIST)
-   testHeap<PQ_List<int>, int> ( atoi ( argv[1] ) ); //词条类型可以在这里任意选择
+    testHeap<PQ_List<int>, int>(n); //词条类型可以在这里任意选择
 #else
-   printf ( "PQ type not defined yet\n" );
+    printf("PQ type not defined yet\n");
 #endif
-   return 0;
+    return 0;
 }
+
+
