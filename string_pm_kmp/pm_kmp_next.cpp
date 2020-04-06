@@ -14,8 +14,9 @@ int* buildNext ( char* P ) { //构造模式串P的next表
    int t = N[0] = -1; //模式串指针
    while ( j < m - 1 )
       if ( 0 > t || P[j] == P[t] ) { //匹配
-         j ++; t ++;
-         N[j] = t; //此句可改进...
+         //j ++; t ++;
+         //N[j] = t; //此句可改进...
+         N[++j] = ++t;
       } else //失配
          t = N[t];
    /*DSA*/printString ( P ); printf ( "\n" );

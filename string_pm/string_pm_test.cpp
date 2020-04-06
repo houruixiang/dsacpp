@@ -62,16 +62,34 @@ int match ( char*, char* );
 /******************************************************************************************
  * ´®Æ¥ÅäËã·¨Í³Ò»²âÊÔ
  ******************************************************************************************/
-int main ( int argc, char* argv[] ) {
-   if ( 3 > argc ) { fprintf ( stderr, "\nUsage: %s <Pattern> <Text>\n\nFor example %s people \"now is the time for all good people to come\"\n\n", argv[0], argv[0] ); return -1; }
-   for ( int i = 0; i < ( argc - 1 ) / 2 * 2; i += 2 ) {
-      /*DSA*/system ( "cls" ); printf ( "####################################################\n" );
-      /*DSA*/printf ( "Text:     " ); printString ( argv[i+2] ); printf ( "\n" );
-      /*DSA*/printf ( "Pattern:  " ); printString ( argv[i+1] ); printf ( "\n" );
-      int pos = match ( argv[i+1], argv[i+2] );
-      /*DSA*/if ( strlen ( argv[i+2] ) < pos + strlen ( argv[i+1] ) )   printf ( "No matching found\a\a\n" );
-      /*DSA*/else                                               printf ( "Matching found at #%d\a\n", pos );
-      /*DSA*/getchar();
-   }
-   return 0;
+//int main ( int argc, char* argv[] ) {
+//   if ( 3 > argc ) { fprintf ( stderr, "\nUsage: %s <Pattern> <Text>\n\nFor example %s people \"now is the time for all good people to come\"\n\n", argv[0], argv[0] ); return -1; }
+//   for ( int i = 0; i < ( argc - 1 ) / 2 * 2; i += 2 ) {
+//      /*DSA*/system ( "cls" ); printf ( "####################################################\n" );
+//      /*DSA*/printf ( "Text:     " ); printString ( argv[i+2] ); printf ( "\n" );
+//      /*DSA*/printf ( "Pattern:  " ); printString ( argv[i+1] ); printf ( "\n" );
+//      int pos = match ( argv[i+1], argv[i+2] );
+//      /*DSA*/if ( strlen ( argv[i+2] ) < pos + strlen ( argv[i+1] ) )   printf ( "No matching found\a\a\n" );
+//      /*DSA*/else                                               printf ( "Matching found at #%d\a\n", pos );
+//      /*DSA*/getchar();
+//   }
+//   return 0;
+//}
+
+
+
+int main(int argc, char* argv[]) {
+
+    argv[0] = "000100001";
+    argv[1] = "00001";
+ 
+        /*DSA*/system("cls"); printf("####################################################\n");
+        /*DSA*/printf("Text:     "); printString(argv[0]); printf("\n");
+        /*DSA*/printf("Pattern:  "); printString(argv[1]); printf("\n");
+        int pos = match(argv[1], argv[0]);
+        /*DSA*/if (strlen(argv[0]) < pos + strlen(argv[1]))   printf("No matching found\a\a\n");
+        /*DSA*/else                                           printf("Matching found at #%d\a\n", pos);
+        /*DSA*/getchar();
+   
+    return 0;
 }
